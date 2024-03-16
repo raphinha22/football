@@ -184,7 +184,8 @@ nav ul li a:hover {
   margin-top: 30px;
 }
 .person {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -235,4 +236,29 @@ nav ul li a:hover {
 }
 .content.active {
   display: block;
+}
+@media screen and (max-width: 1350px) {
+  .p-info {
+    flex-direction: column;
+  }
+  .show-text {
+    display: none;
+  }
+  .text-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-center .p-info .text-person p {
+    width: 300px;
+  }
+  .person {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-center .p-info .person-image .person-img {
+    width: 300px;
+    height: 320px;
+  }
 }
